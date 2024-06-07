@@ -1079,7 +1079,7 @@ GameObject:
   - component: {fileID: 29499377}
   m_Layer: 0
   m_Name: Capsule (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7166,7 +7166,7 @@ GameObject:
   - component: {fileID: 251959908}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19179,7 +19179,7 @@ GameObject:
   - component: {fileID: 771954544}
   m_Layer: 0
   m_Name: Capsule (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21810,7 +21810,7 @@ GameObject:
   - component: {fileID: 879411544}
   m_Layer: 0
   m_Name: Capsule (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32096,7 +32096,7 @@ GameObject:
   - component: {fileID: 1275136898}
   m_Layer: 0
   m_Name: Capsule (5)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35521,6 +35521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403170065}
   - component: {fileID: 1403170066}
+  - component: {fileID: 1403170067}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -35559,6 +35560,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponSelected: 0
+--- !u!95 &1403170067
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403170064}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7f5947efa553f240aaa24bd1316bc9e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1406579779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012093006816, guid: dd9a03a16f506fc4f8425ffe0ece5663, type: 3}
@@ -39040,7 +39062,7 @@ GameObject:
   - component: {fileID: 1571659887}
   m_Layer: 0
   m_Name: Capsule (7)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40653,7 +40675,7 @@ GameObject:
   - component: {fileID: 1637933953}
   m_Layer: 0
   m_Name: Capsule (6)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50945,7 +50967,7 @@ GameObject:
   - component: {fileID: 2079914291}
   m_Layer: 0
   m_Name: Capsule (4)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53044,11 +53066,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   range: 100
-  hitForce: 75
+  hitForce: 250
   cam: {fileID: 2287991485860252851}
   particalEffect: {fileID: 110062, guid: 30902f8af10daa04cabd79e9ef258f08, type: 3}
   fireRate: 3
   gunSound: {fileID: 8300000, guid: ae7f5df0b7dcee343992bd26ad5052c3, type: 3}
+  reloadClip: {fileID: 8300000, guid: 2bb6ab416404e894c92afda3fffdff9d, type: 3}
+  maxAmmo: 12
+  currentAmmo: 0
+  reloadTime: 1
+  reloadAnim: {fileID: 1403170067}
 --- !u!4 &7427773526349177875
 Transform:
   m_ObjectHideFlags: 0
@@ -53191,11 +53218,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   range: 100
-  hitForce: 250
+  hitForce: 2000
   cam: {fileID: 2287991485860252851}
   particalEffect: {fileID: 183908, guid: fa6d29df930056640bf15fb9b6a54e4a, type: 3}
   fireRate: 1
   gunSound: {fileID: 8300000, guid: 3967b913d8c0d7d40836cb1b0fa06254, type: 3}
+  reloadClip: {fileID: 8300000, guid: 188e6416bc41298489bbb06a31fdef0f, type: 3}
+  maxAmmo: 2
+  currentAmmo: 0
+  reloadTime: 2
+  reloadAnim: {fileID: 1403170067}
 --- !u!82 &8497356028136485679
 AudioSource:
   m_ObjectHideFlags: 0
@@ -53306,11 +53338,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 100
-  hitForce: 100
+  hitForce: 500
   cam: {fileID: 2287991485860252851}
   particalEffect: {fileID: 161002, guid: 489aba68c9dfe9342accb1f3a0be4e5b, type: 3}
   fireRate: 8
   gunSound: {fileID: 8300000, guid: 3061c7b9b32d894478e4126ccce25ca3, type: 3}
+  reloadClip: {fileID: 8300000, guid: 188e6416bc41298489bbb06a31fdef0f, type: 3}
+  maxAmmo: 30
+  currentAmmo: 0
+  reloadTime: 1
+  reloadAnim: {fileID: 1403170067}
 --- !u!1 &8631155585062192091
 GameObject:
   m_ObjectHideFlags: 0
