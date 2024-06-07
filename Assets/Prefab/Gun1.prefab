@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6820098654214910899}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.236, y: -0.32, z: 0.531}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.23600006, y: -0.31999993, z: 0.53100014}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -153,11 +153,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 100
-  hitForce: 100
+  hitForce: 500
   cam: {fileID: 0}
   particalEffect: {fileID: 161002, guid: 489aba68c9dfe9342accb1f3a0be4e5b, type: 3}
   fireRate: 8
   gunSound: {fileID: 8300000, guid: 3061c7b9b32d894478e4126ccce25ca3, type: 3}
+  reloadClip: {fileID: 8300000, guid: 188e6416bc41298489bbb06a31fdef0f, type: 3}
+  maxAmmo: 30
+  currentAmmo: 0
+  reloadTime: 1
+  reloadAnim: {fileID: 0}
 --- !u!82 &2456365630891760831
 AudioSource:
   m_ObjectHideFlags: 0
@@ -169,7 +174,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
